@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meez MCP — hero diagram</title>
+<style>
+    @font-face { font-family: "Circular CustCapNum"; src: url("fonts/CircularCustCapNum-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Circular CustCapNum"; src: url("fonts/CircularCustCapNum-Book.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Circular CustCapNum"; src: url("fonts/CircularCustCapNum-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Circular CustCapNum"; src: url("fonts/CircularCustCapNum-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Circular CustCapNum"; src: url("fonts/CircularCustCapNum-Black.otf") format("opentype"); font-weight: 900; font-style: normal; font-display: swap; }
+  *, *::before, *::after { box-sizing: border-box; }
+  img, svg { max-width: 100%; }
+  body { margin: 0; background: transparent; font-family: "Circular CustCapNum", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; padding: 48px 28px; }
+  @keyframes dashSlideY { from { background-position-y: 0; } to { background-position-y: 12px; } }
+  @keyframes dashSlideX { from { background-position-x: 0; } to { background-position-x: 12px; } }
+  @keyframes nodeGlow { 0%, 100% { box-shadow: 0 8px 24px rgba(60,70,121,.10); } 50% { box-shadow: 0 8px 40px rgba(61,93,246,.28); } }
+  @keyframes chipLift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @keyframes barGrow { from { transform: scaleX(.2); } to { transform: scaleX(1); } }
+</style>
+</head>
+<body>
+<div style="max-width:1240px;margin:44px auto 0;display:flex;flex-direction:column;align-items:center">
+      <div style="width:100%;display:grid;grid-template-columns:minmax(190px,0.85fr) 30px minmax(215px,1fr) 30px minmax(390px,1.9fr);align-items:center;gap:0">
+
+        <div style="animation:nodeGlow 6s ease-in-out infinite;background:linear-gradient(180deg,rgba(28,40,96,0.6),rgba(10,16,52,0.8));border:1px solid rgba(120,160,255,0.4);border-radius:18px;padding:38px 26px;display:flex;flex-direction:column;align-items:center;gap:20px;min-width:0">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+            <img src="https://cdn.prod.website-files.com/5e442b5a21d45829c50ee470/691b72783ebda220872bdae9_meez%20logo%20white.svg" alt="meez" style="height:40px;display:block">
+            <div style="font-size:21px;font-weight:500;color:#DDE3FA">Recipe OS</div>
+          </div>
+          <div style="width:70%;height:1px;background:rgba(140,165,255,0.25)"></div>
+          <div style="font-size:15px;line-height:1.45;color:#A7B0D8;text-align:center;text-wrap:balance">The source of truth for your recipes</div>
+          <div style="width:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:7px">
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Recipes</span>
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Ingredients</span>
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Menus</span>
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Nutrition</span>
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Allergens</span>
+            <span style="border:1px solid rgba(120,140,220,0.3);border-radius:8px;padding:6px 10px;font-size:15px;font-weight:500;color:#EAEEFB">Costs</span>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:center">
+          <span style="width:100%;height:3px;border-radius:2px;background:repeating-linear-gradient(90deg,#6B8AFF 0 3px,transparent 3px 9px);animation:dashSlideX .8s linear infinite"></span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0;min-width:0">
+          <div style="animation:nodeGlow 6s ease-in-out infinite;width:100%;background:linear-gradient(180deg,rgba(46,28,104,0.55),rgba(12,14,52,0.85));border:1px solid rgba(139,107,247,0.5);border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:14px">
+            <svg width="30" height="26" viewBox="0 0 34 28" fill="none" style="flex:0 0 auto"><g stroke="#A88BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5 3 14l7 9M24 5l7 9-7 9M19 3l-4 22"></path></g></svg>
+            <div style="min-width:0">
+              <div style="font-size:19px;font-weight:900;letter-spacing:-0.01em;color:#FFFFFF">meez MCP</div>
+              <div style="font-size:15px;color:#B6A2FF;margin-top:2px">Secure AI data access layer</div>
+            </div>
+          </div>
+
+          <span style="width:3px;height:26px;background:repeating-linear-gradient(180deg,#8B6BF7 0 3px,transparent 3px 9px);animation:dashSlideY .8s linear infinite;margin:10px 0"></span>
+
+          <div style="width:100%;background:linear-gradient(180deg,rgba(18,52,60,0.45),rgba(8,16,40,0.8));border:1px solid rgba(64,180,154,0.35);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:14px">
+            <div style="font-size:15px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#5FD0B4;white-space:nowrap">Connect any AI tool</div>
+            <div style="width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+              <div style="animation:chipLift 5s ease-in-out 0s infinite;background:rgba(255,255,255,0.05);border:1px solid rgba(120,140,220,0.24);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><img src="logos/chatgpt.png" alt="" style="width:34px;height:34px;border-radius:9px;display:block;background:rgba(255,255,255,0.08)"><span style="font-size:15px;font-weight:700;color:#EAEEFB">Claude</span></div>
+              <div style="animation:chipLift 5s ease-in-out 0.5s infinite;background:rgba(255,255,255,0.05);border:1px solid rgba(120,140,220,0.24);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><img src="logos/claude.png" alt="" style="width:34px;height:34px;border-radius:9px;display:block;background:rgba(255,255,255,0.08)"><span style="font-size:15px;font-weight:700;color:#EAEEFB">ChatGPT</span></div>
+              <div style="animation:chipLift 5s ease-in-out 1s infinite;background:rgba(255,255,255,0.05);border:1px solid rgba(120,140,220,0.24);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><img src="logos/perplexity.png" alt="" style="width:34px;height:34px;border-radius:9px;display:block;background:rgba(255,255,255,0.08)"><span style="font-size:15px;font-weight:700;color:#EAEEFB">Cursor</span></div>
+              <div style="animation:chipLift 5s ease-in-out 1.5s infinite;background:rgba(255,255,255,0.05);border:1px solid rgba(120,140,220,0.24);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:34px;height:34px;border-radius:9px;background:rgba(64,180,154,0.14);border:1px solid rgba(64,180,154,0.4);display:flex;align-items:center;justify-content:center;gap:4px;box-sizing:border-box"><span style="width:6px;height:6px;border-radius:50%;background:#40B49A"></span><span style="width:6px;height:6px;border-radius:50%;background:#40B49A"></span><span style="width:6px;height:6px;border-radius:50%;background:#40B49A"></span></span><span style="font-size:15px;font-weight:700;color:#EAEEFB;text-align:center;white-space:nowrap">Any tool</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:center">
+          <span style="width:100%;height:3px;border-radius:2px;background:repeating-linear-gradient(90deg,#6B8AFF 0 3px,transparent 3px 9px);animation:dashSlideX .8s linear infinite"></span>
+        </div>
+
+        <div style="background:linear-gradient(180deg,rgba(28,24,92,0.45),rgba(10,14,48,0.75));border:1px solid rgba(139,107,247,0.42);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#B6A2FF;text-align:center">Answers, reports, and workflows</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px">
+
+          <div style="background:linear-gradient(180deg,rgba(32,44,102,0.55),rgba(10,16,52,0.75));border:1px solid rgba(120,140,220,0.28);border-radius:12px;padding:12px;text-align:left;min-width:0">
+            <div style="font-size:15px;font-weight:700;color:#F2F5FF">Opportunities</div>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:9px">
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(120,140,220,0.18);border-radius:9px;padding:6px 9px;display:flex;flex-direction:column;gap:3px">
+                <div style="display:flex;align-items:center;gap:7px"><span style="flex:0 0 17px;height:17px;border-radius:50%;background:rgba(107,138,255,0.2);color:#9FB4FF;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><span style="font-size:15px;font-weight:700;color:#9FB4FF;background:rgba(107,138,255,0.14);border-radius:999px;padding:2px 8px;white-space:nowrap">Mix shift</span></div>
+                <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font-size:15px;font-weight:700;color:#EAEEFB;white-space:nowrap">Steer the mix</span><span style="font-size:15px;font-weight:700;color:#FFFFFF;white-space:nowrap">$58,848</span></div>
+              </div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(120,140,220,0.18);border-radius:9px;padding:6px 9px;display:flex;flex-direction:column;gap:3px">
+                <div style="display:flex;align-items:center;gap:7px"><span style="flex:0 0 17px;height:17px;border-radius:50%;background:rgba(64,180,154,0.2);color:#66D2B8;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><span style="font-size:15px;font-weight:700;color:#66D2B8;background:rgba(64,180,154,0.14);border-radius:999px;padding:2px 8px;white-space:nowrap">Re-engineer</span></div>
+                <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font-size:15px;font-weight:700;color:#EAEEFB;white-space:nowrap">Pimento Cheese</span><span style="font-size:15px;font-weight:700;color:#FFFFFF;white-space:nowrap">$23,394</span></div>
+              </div>
+              
+              
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(180deg,rgba(32,44,102,0.55),rgba(10,16,52,0.75));border:1px solid rgba(120,140,220,0.28);border-radius:12px;padding:12px;text-align:left;min-width:0">
+            <div style="font-size:15px;font-weight:700;color:#F2F5FF">Ingredient spend</div>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;align-items:center;gap:8px"><span style="flex:0 0 auto;min-width:104px;font-size:15px;color:#C6CEF2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Cream Cheese</span><span style="flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,0.10);overflow:hidden"><span style="display:block;width:100%;height:100%;border-radius:999px;background:#6B8AFF;transform-origin:left;animation:barGrow 1.4s cubic-bezier(.2,.8,.2,1) both"></span></span><span style="font-size:15px;font-weight:700;color:#FFFFFF">29.0%</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span style="flex:0 0 auto;min-width:104px;font-size:15px;color:#C6CEF2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Beef Tri-tip</span><span style="flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,0.10);overflow:hidden"><span style="display:block;width:27%;height:100%;border-radius:999px;background:#6B8AFF;transform-origin:left;animation:barGrow 1.4s cubic-bezier(.2,.8,.2,1) .1s both"></span></span><span style="font-size:15px;font-weight:700;color:#FFFFFF">7.7%</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span style="flex:0 0 auto;min-width:104px;font-size:15px;color:#C6CEF2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Parmigiano</span><span style="flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,0.10);overflow:hidden"><span style="display:block;width:19%;height:100%;border-radius:999px;background:#6B8AFF;transform-origin:left;animation:barGrow 1.4s cubic-bezier(.2,.8,.2,1) .2s both"></span></span><span style="font-size:15px;font-weight:700;color:#FFFFFF">5.4%</span></div>
+              <div style="display:flex;align-items:center;gap:8px"><span style="flex:0 0 auto;min-width:104px;font-size:15px;color:#C6CEF2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Roma Tomato</span><span style="flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,0.10);overflow:hidden"><span style="display:block;width:13%;height:100%;border-radius:999px;background:#6B8AFF;transform-origin:left;animation:barGrow 1.4s cubic-bezier(.2,.8,.2,1) .3s both"></span></span><span style="font-size:15px;font-weight:700;color:#FFFFFF">3.7%</span></div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(180deg,rgba(32,44,102,0.55),rgba(10,16,52,0.75));border:1px solid rgba(120,140,220,0.28);border-radius:12px;padding:12px;text-align:left;min-width:0">
+            <div style="font-size:15px;font-weight:700;color:#F2F5FF">Allergens</div>
+            <div style="margin-top:10px;display:grid;grid-template-columns:minmax(76px,1fr) 44px 44px 44px;gap:9px 4px;font-size:15px;align-items:center;white-space:nowrap">
+              <span style="font-size:15px;font-weight:700;letter-spacing:.06em;color:#A7B0D8">MENU ITEM</span><span style="font-size:15px;font-weight:700;color:#A7B0D8;text-align:center">MILK</span><span style="font-size:15px;font-weight:700;color:#A7B0D8;text-align:center">SOY</span><span style="font-size:15px;font-weight:700;color:#A7B0D8;text-align:center">NUTS</span>
+              <span style="color:#EAEEFB;white-space:nowrap">Steak &amp; Salsa</span><span style="text-align:center;color:#66D2B8;font-weight:700">✓</span><span style="text-align:center;color:#F5BC6E;font-weight:700">~</span><span style="text-align:center;color:#66D2B8;font-weight:700">✓</span>
+              <span style="color:#EAEEFB">Chicken + Slaw</span><span style="text-align:center;color:#F5BC6E;font-weight:700">~</span><span style="text-align:center;color:#66D2B8;font-weight:700">✓</span><span style="text-align:center;color:#F5BC6E;font-weight:700">~</span>
+              <span style="color:#EAEEFB">Pork + Pickles</span><span style="text-align:center;color:#66D2B8;font-weight:700">✓</span><span style="text-align:center;color:#F5BC6E;font-weight:700">~</span><span style="text-align:center;color:#66D2B8;font-weight:700">✓</span>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(180deg,rgba(32,44,102,0.55),rgba(10,16,52,0.75));border:1px solid rgba(120,140,220,0.28);border-radius:12px;padding:12px;text-align:left;min-width:0">
+            <div style="font-size:15px;font-weight:700;color:#F2F5FF">Location comparison</div>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:9px;font-size:15px">
+              <div style="display:flex;justify-content:space-between;gap:10px;font-size:15px;color:#A7B0D8;white-space:nowrap"><span>Location</span><span>Food cost %</span></div>
+              <div style="display:flex;justify-content:space-between;gap:10px;color:#EAEEFB;white-space:nowrap"><span>14th Street</span><span style="font-weight:700;color:#FFFFFF">26.1%</span></div>
+              <div style="display:flex;justify-content:space-between;gap:10px;color:#EAEEFB;white-space:nowrap"><span>23rd St</span><span style="font-weight:700;color:#FFFFFF">25.5%</span></div>
+              <div style="display:flex;justify-content:space-between;gap:10px;color:#EAEEFB;white-space:nowrap"><span>Bergen Street</span><span style="font-weight:700;color:#FFFFFF">25.4%</span></div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    
+</body>
+</html>
