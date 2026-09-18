@@ -20,6 +20,7 @@
   @keyframes barGrow { from { transform: scaleX(.2); } to { transform: scaleX(1); } }
 </style>
 </head>
+  
 <body>
 <div style="max-width:1240px;margin:0px auto 0;display:flex;flex-direction:column;align-items:center">
       <div style="width:100%;display:grid;grid-template-columns:minmax(190px,0.85fr) 30px minmax(215px,1fr) 30px minmax(390px,1.9fr);align-items:center;gap:0">
@@ -125,7 +126,21 @@
         </div>
 
       </div>
+  <script>
 
+  (function () {
+    function reportHeight() {
+      var h = document.documentElement.scrollHeight;
+      window.parent.postMessage({ mcpHeroHeight: h }, '*');
+    }
+    window.addEventListener('load', reportHeight);
+    window.addEventListener('resize', reportHeight);
+    if (window.ResizeObserver) {
+      new ResizeObserver(reportHeight).observe(document.body);
+    }
+    reportHeight();
+  })();
+</script>
     
 </body>
 </html>
